@@ -1,0 +1,96 @@
+#header{
+  top: 0;
+  left: 0;
+  right: 0;
+
+  position: fixed;
+  display: flex;
+  align-items: center;
+  
+  width: 100vw;
+  height: 80px;
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+
+  z-index: 1000;
+  transition: all 500ms ease-in;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+header svg{
+  margin: 5px 10px;
+}
+
+nav{
+  font-family: var(--fontOpen);
+  font-weight: 400;
+
+  font-size: .9em;
+
+  display: flex;
+  align-items: center;
+}
+
+nav ul{
+  display: flex;
+}
+
+nav ul li{
+  padding: 5px 20px;
+}
+
+nav ul li:hover a{
+  color: var(--corLink);
+}
+
+nav ul li::after{
+  content: '';
+  display: block;
+  height: 3px;
+  width: 0;
+  background-color: var(--corLink);
+  transition: all 50ms ease-in;
+}
+
+nav ul li:hover:after{
+  transition: all 150ms ease-in;
+  width: 100%;
+}
+
+.ativo{
+  background: var(--corDestaqueEscura) !important;
+  transition: all 500ms ease-in;
+}
+
+#header.ativo{
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2) !important;
+  height: 60px;
+}
+
+.ativo nav ul li a{
+  color: #FFF;
+}
+
+.ativo a svg path{
+  fill: #FFF;
+}
+
+#menuIcon{
+  color: var(--corDestaqueEscura);
+  padding: 10px;
+}
+
+.ativo #menuIcon{
+  color: #FFF;
+}

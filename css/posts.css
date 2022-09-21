@@ -1,0 +1,58 @@
+#og{
+  margin-top: 150px;
+}
+
+h1{
+  margin: 80px 0;
+  font-family: var(--fontMontSerrat);
+  font-weight: 600;
+}
+
+.texto{
+  display: flex;
+  gap: 20px;
+}
+
+.texto ul{
+  margin: 10px 0 10px 20px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.italico{
+  font-style: italic;
+}
+
+.citacao{
+  font-style: italic;
+  font-size: 1.5em;
+  margin-top: 50px;
+  padding: 50px 100px;
+
+  background-color: var(--corDestaqueEscura);
+  color: #FFF;
+}
+
+.mt-20{
+  margin-top: 20px;
+}
+
+.destaque{
+  background-color: var(--corDestaqueClara);
+  color: #FFF;
+  padding: 3px 5px;
+  border-radius: 5px;
+  margin: 0 3px;
+}
+
+.centraliza-itens{
+  display: flex;
+  justify-content: center;
+}
+
+.my-50{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}

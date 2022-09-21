@@ -1,0 +1,340 @@
+/* 
+PRINCIPAIS BREAKPOINTS
+
+  Telas pequenas:     até 600px
+  Celular:            600px - 768px
+  Tablet:             769px - 992px
+  Desktop:            993px - 1199px
+  Telas Grandes       1201px e acima
+
+*/
+
+@media(max-width: 1200px){
+  .cards .card{
+    height: 250px;
+  }
+}
+
+@media(max-width: 1025px){
+  #header header{
+    gap: 20px;
+  }
+
+  #header header div:not(#menuIcon){
+    display: flex;
+  }
+
+  #header header div a{
+    display: flex;
+  }
+  #header header div a svg{
+    width: 30px;
+  }
+
+  nav ul li{
+    padding: 5px 10px;
+  }
+
+  #header a svg{
+    width: 50px;
+  }
+
+  #cards{
+    max-width: 100%;
+  }
+
+  #nossos-pilares .container,
+  #nossas-reunioes .container,
+  #projetos-que-apoiamos .container,
+  #simbolos-de-fe .container,
+  #contribua-onde-estamos .container
+  {
+    max-width: 100%;
+  }
+
+  #contribua-onde-estamos{
+    height: auto;
+    margin: 80px 20px;
+  }
+}
+
+@media(max-width:769px){
+  #menuIcon{
+    display: none;
+  }
+
+  #header{
+    height: 80px;
+  }
+
+  #header.ativo{
+    height: 120px;
+  }
+
+  #header .container{
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+  }
+
+  #header header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+  }
+
+  #header nav{
+    flex-shrink: 0;
+    order: 2;
+
+    margin: 10px 0;
+  }
+
+  #header a{
+    order: 1;
+  }
+
+  #header header > div{
+    order: 3;
+  }
+
+  #header header nav ul li{
+    padding: 5px 10px;
+  }
+
+  .cards .card{
+    height: 250px;
+  }
+
+  .cards .card p{
+    font-size: 0.9em;
+  }
+
+  #menuIcon{
+    display: flex;
+    cursor: pointer;
+  }
+
+  #header{
+    margin: 0;
+  }
+
+  #header header{
+    justify-content: center;
+  }
+
+  #header #itensMenu{
+    display: none;
+  }
+
+  header{
+    padding: 0;
+    margin: 0;
+
+    height: 60px;
+    width: 100%;
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: 1fr;
+  }
+
+  #header.ativo{
+    height: 80px;
+  }
+
+  #header.menuResponsivo header{
+    grid-template-rows: auto auto;
+    height: auto;
+
+    display: grid;
+  }
+
+  #header.menuResponsivo{
+    height: 300px;
+  }
+
+  #header.menuResponsivo #itensMenu{
+    display: flex;
+    justify-content: center;
+
+    order: 5;
+
+    grid-column: 1/5;
+    grid-row: 2;
+
+    margin-top: 10px;
+  }
+
+  #header.menuResponsivo #itensMenu ul{
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+  }
+
+  #header.menuResponsivo #itensMenu ul li{
+    padding: 5px 10px;
+  }
+
+  #intro .container p{
+    text-align: center;
+  }
+
+  #cards .cards{
+    display: flex;
+    flex-direction: column;
+
+    transform: none;
+
+    margin: 30px 0;
+  }
+
+  .cards .card{
+    height: auto;
+  }
+
+  #nossos-pilares{
+    height: auto;
+    margin: 80px 0;
+  }
+
+  #nossos-pilares .container{
+    flex-direction: column;
+  }
+
+  #nossos-pilares .container picture{
+    width: 100%;
+  }
+
+  #nossos-pilares .container img{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .lista-nossos-pilares ul li > div{
+    width: 90%;
+  }
+
+
+  #nossas-reunioes{
+    height: auto;
+    margin: 80px 0;
+  }
+
+  #nossas-reunioes .nossas-reunioes-cards img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  #nossas-reunioes .nossas-reunioes-cards{
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 300px 300px 300px;
+    grid-template-areas:
+      "ebd"
+      "solene"
+      "oracao"
+      "biblico"
+    ;
+  }
+
+  #projetos-que-apoiamos{
+    height: auto;
+    margin: 80px 0;
+
+    flex-direction: column;
+  }
+
+  #projetos-que-apoiamos .container{
+    flex-direction: column;
+  }
+
+  #projetos-que-apoiamos .container picture{
+    width: 100%;
+  }
+
+  #projetos-que-apoiamos .container img{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+
+  #simbolos-de-fe {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .simbolos-de-fe-cards{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .simbolos-de-fe-cards-item{
+    width: 100%;
+  }
+
+  .simbolos-de-fe-cards-item img{
+    height: 300px;
+    object-fit: cover;
+  }
+
+  #contribua-onde-estamos .cards{
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+  }
+
+  #morrinho{
+    padding-top: 0;
+    flex-direction: column;
+  }
+
+  #morrinho picture{
+    width: 100%;
+  }
+
+  #morrinho img{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #morrinho .informacoes{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #nossas-reunioes .nossas-reunioes-cards{
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 200px 200px 200px;
+  }
+
+  #nossos-pilares .texto{
+    margin: 0;
+  }
+
+  #nossos-pilares .lista-nossos-pilares ul li{
+    margin: 0;
+  }
+
+  #nossas-reunioes .nossas-reunioes-cards img{
+    height: 200px;
+  }
+
+  #projetos-que-apoiamos .container .texto{
+    margin: 0;
+  }
+
+  .simbolos-de-fe-cards-item img{
+    height: 200px;
+  }
+
+
+  #contribua-onde-estamos{
+    margin: 80px 0;
+  }
+}

@@ -1,0 +1,788 @@
+@import url('reset.css');
+@import url('nav.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,600;0,900;1,200;1,400;1,600;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,900;1,200;1,400;1,600;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,400;0,600;0,900;1,200;1,400;1,600;1,900&display=swap');
+
+:root{
+  --corDestaqueClara: #0C5ADB;
+  --corDestaqueEscura: #014E82;
+  --corSuave: #dbf1ff;
+  --corTitulo: #333;
+  --corTexto: #888;
+
+  --corLink: var(--corDestaqueClara);
+
+  --fontSource: 'Source Sans Pro', sans-serif;
+  --fontMontSerrat: 'Montserrat', sans-serif;
+  --fontOpen: 'Open Sans', sans-serif;
+}
+
+body{
+  font-family: var(--fontSource);
+}
+
+h2{
+  font-family: var(--fontMontSerrat);
+  font-size: 1.8em;
+  color: var(--corTitulo);
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+#menuIcon{
+  display: none;
+  cursor: pointer;
+}
+
+.botao{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 180px;
+  height: 40px;
+
+  /* line-height: 40px; */
+  text-decoration: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+
+  color: var(--corDestaqueEscura);
+  border: 2px solid var(--corDestaqueEscura);
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  transition: all 100ms ease-in;
+}
+
+.botao span{
+  position: relative;
+  z-index: 2;
+  transition: all 100ms ease-in;
+  display: flex;
+}
+
+.botao:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--corDestaqueClara);
+  transition: all .35s;
+}
+
+.botao:hover{
+  color: #fff;
+  transition: all 100ms ease-in;
+}
+
+.botao:hover:after{
+  width: 100%;
+}
+
+footer{
+  margin-top: 100px;
+  height: 320px;
+  display: grid;
+  align-items: center;
+}
+
+
+
+
+/* ------------- */
+#intro{
+  background-image: url('../img/home/home-bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  /* width: 100vw; */
+  height: calc(100vh - 150px);
+
+  display: grid;
+  align-content: center;
+
+  grid-template-rows: auto;
+}
+
+#intro .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#intro .container p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+
+  text-transform: uppercase;
+
+  color: var(--corDestaqueEscura);
+  margin: 10px 0;
+}
+
+#intro .texto-intro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+/* ----------------- */
+#cards{
+  height: auto;
+}
+
+.cards{
+  transform: translateY(-50%);
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.cards .card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 10px;
+  border-radius: 0;
+  border-color: #fff;
+
+  height: 200px;
+
+  box-shadow:
+  1px 0.8px 10.6px rgba(0, 0, 0, 0.024),
+  2.6px 2.1px 17.2px rgba(0, 0, 0, 0.035),
+  6.3px 5.1px 23.6px rgba(0, 0, 0, 0.046),
+  21px 17px 45px rgba(0, 0, 0, 0.07);
+
+  border: none;
+  border-right: 5px solid var(--corDestaqueEscura);
+}
+
+.cards .card svg{
+  margin: 10px 0;
+}
+.cards .card p{
+  margin: 0;
+}
+
+.cards .titulo-card{
+  display: flex;
+
+  align-items: center;
+}
+
+.cards .titulo-card p{
+  font-family: var(--fontMontSerrat);
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 20px;
+  color: var(--corTitulo);
+}
+
+.cards .texto-card{
+  text-align: center;
+}
+
+.cards .texto-card p{
+  font-family: var(--fontOpen);
+  font-size: 1em;
+  font-weight: normal;
+  text-transform: none;
+  color: var(--corTexto);
+}
+
+
+
+
+/* ------------------- */
+#nossos-pilares {
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+}
+
+#nossos-pilares .container{
+  display: flex;
+  align-items: center;
+}
+
+#nossos-pilares .texto{
+  margin-left: 20px;
+}
+
+#nossos-pilares .lista-nossos-pilares ul li{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  
+  display: flex;
+  align-items: self-start;
+}
+
+#nossos-pilares .lista-nossos-pilares ul li div{
+  margin-left: 20px;
+  display: grid;
+}
+
+#nossos-pilares .lista-nossos-pilares ul li div span:first-child{
+  font-size: 1.5em;
+  font-weight: 900;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#nossos-pilares .lista-nossos-pilares ul li div span:first-child::after{
+  content: '';
+  display: block;
+  height: 4px;
+  width: 50px;
+  background-color: var(--corTitulo);
+}
+
+#nossos-pilares .lista-nossos-pilares ul li div span:nth-child(2){
+  color: var(--corTexto);
+}
+
+
+
+
+/* Nossas reuniões */
+
+#nossas-reunioes{
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+}
+
+#nossas-reunioes .nossas-reunioes-cards{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  grid-template-areas: 
+    "ebd    solene oracao biblico"
+  ;
+  gap: 20px;
+}
+
+#nossas-reunioes .nossas-reunioes-cards-item{
+  display: grid;
+
+  grid-template-rows: 1fr;
+  grid-column: 1fr;
+
+  align-items: flex-end;
+}
+
+#nossas-reunioes .nossas-reunioes-cards-item:nth-child(1){
+  grid-area: ebd;
+}
+
+#nossas-reunioes .nossas-reunioes-cards-item:nth-child(2){
+  grid-area: solene;
+}
+
+#nossas-reunioes .nossas-reunioes-cards-item:nth-child(3){
+  grid-area: oracao;
+}
+
+#nossas-reunioes .nossas-reunioes-cards-item:nth-child(4){
+  grid-area: biblico;
+}
+
+#nossas-reunioes .nossas-reunioes-cards-item .informacoes{
+  grid-row: 1;
+  grid-column: 1;
+
+  padding: 10px;
+
+  transition: all 200ms ease-in;
+
+  z-index: 1;
+}
+
+#nossas-reunioes .nossas-reunioes-cards-item:hover .titulo{
+  transform: translateY(-50%);
+  transition: all 100ms ease-in;
+}
+
+
+#nossas-reunioes .nossas-reunioes-cards-item:hover .texto{
+  transition: all 500ms ease-in;
+  opacity: 1;
+
+  transform: translateY(-20%);
+}
+
+#nossas-reunioes .nossas-reunioes-cards-item:hover #culto-on-line svg path{
+  fill: red;
+  transition: all 200ms ease-in;
+}
+
+#nossas-reunioes .nossas-reunioes-cards-item #culto-on-line{
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+  
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-self: end;
+  align-items: flex-end;
+
+  margin: 20px;
+
+  color: #FFF;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+#nossas-reunioes .nossas-reunioes-cards-item #culto-on-line p{
+  opacity: 0;
+  transition: all 200ms ease-in;
+}
+
+#nossas-reunioes .nossas-reunioes-cards-item:hover #culto-on-line p{
+  opacity: 1;
+  transition: all 200ms ease-in;
+  transform: translateY(-10%);
+}
+
+#nossas-reunioes .nossas-reunioes-cards-item #culto-on-line svg{
+  width: 50px;
+}
+
+#nossas-reunioes .nossas-reunioes-cards-item  #culto-on-line svg path{
+  fill: #FFF;
+  transition: all 100ms ease-in;
+}
+
+#nossas-reunioes .nossas-reunioes-cards-item img{
+  grid-row: 1;
+  grid-column: 1;
+
+  width: 100%;
+  /* filter: brightness(0.6); */
+}
+
+
+#nossas-reunioes .nossas-reunioes-cards-item .titulo{
+  font-family: var(--fontOpen);
+  font-size: 1.2em;
+  color: #FFF;
+  font-weight: 900;
+
+  display: flex;
+  align-self: flex-end;
+
+  transform: translateY(30%);
+  transition: all 200ms ease-in;
+  line-height: 1;
+}
+
+#nossas-reunioes .nossas-reunioes-cards-item .texto{
+  display: flex;
+
+  font-family: var(--fontOpen);
+  font-size: 1.2em;
+  color: #FFF;
+
+  opacity: 0;
+  transition: all 50ms ease-in;
+}
+
+
+
+/* ----------- */
+#projetos-que-apoiamos{
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+}
+
+#projetos-que-apoiamos .container{
+  display: flex;
+  align-items: center; 
+}
+
+#projetos-que-apoiamos .container .texto{
+  margin-left: 20px;
+}
+
+#projetos-que-apoiamos .container .cards{
+  transform: translateY(0);
+
+  display: flex;
+  flex-direction: column;
+}
+
+#projetos-que-apoiamos .container .card {
+  height: auto;
+}
+
+#projetos-que-apoiamos .container .card a{
+  display: grid;
+
+  grid-template-columns: 30px auto;
+  grid-template-areas: 
+    'img tit'
+    'img txt'
+  ;
+}
+
+#projetos-que-apoiamos .container .card a:after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--corDestaqueClara);
+  transition: all .35s ease-in;
+}
+
+#projetos-que-apoiamos .container .card .titulo-card p{
+  z-index: 1;
+
+  transition: all 0.35s ease-out;
+}
+
+#projetos-que-apoiamos .container .card a:hover .titulo-card p,
+#projetos-que-apoiamos .container .card a:hover .texto-card p
+{
+  color: #FFF;
+  transition: all 200ms ease-in;
+}
+
+#projetos-que-apoiamos .container .card a:hover svg path{
+  fill: #FFF;
+  transition: all 100ms ease-in;
+}
+
+
+#projetos-que-apoiamos .container .card a:hover:after{
+  width: 100%;
+}
+
+#projetos-que-apoiamos .container .card svg{
+  width: 30px;
+  grid-area: img;
+
+  display: flex;
+  align-self: center;
+
+  z-index: 1;
+}
+
+#projetos-que-apoiamos .container .card svg path{
+  transition: all 300ms ease-in-out;
+}
+
+#projetos-que-apoiamos .container .card .texto-card{
+  text-align: left;
+  margin: 0;
+  margin-left: 20px;
+  padding: 0;
+
+  z-index: 1;
+}
+
+#projetos-que-apoiamos .container .card .texto-card p{
+  margin: 0;
+
+  font-family: var(--fontSource);
+
+  transition: all 500ms ease-in-out;
+}
+
+
+
+
+/* ---------------- */
+#simbolos-de-fe{
+  margin: 80px 0;
+  display: grid;
+  align-items: center;
+}
+
+.simbolos-de-fe-cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.simbolos-de-fe-cards a{
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.simbolos-de-fe-cards a img{
+  grid-column: 1;
+  grid-row: 1;
+
+  width: 100%;
+  /* filter: brightness(0.6); */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1;
+}
+
+.simbolos-de-fe-cards a .informacoes{
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+
+  padding: 10px;
+
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+}
+
+.simbolos-de-fe-cards a .informacoes svg{
+  margin-bottom: 10px;
+  width: 30px;
+}
+
+.simbolos-de-fe-cards a .informacoes .titulo{
+  font-family: var(--fontOpen);
+  font-size: 1.2em;
+  color: #FFF;
+  font-weight: 900;
+
+  transform: translateY(50%);
+  transition: all 200ms ease-in;
+  line-height: 1;
+
+  margin: 0;
+  
+  display: grid;
+}
+
+.simbolos-de-fe-cards a .informacoes .texto{
+  font-family: var(--fontOpen);
+  font-size: 1em;
+  color: #FFF;
+
+  opacity: 0;
+}
+
+.simbolos-de-fe-cards a:hover .titulo{
+  transform: translateY(-20%);
+  transition: all 200ms ease-in;
+}
+
+.simbolos-de-fe-cards a:hover .texto{
+  transition: all 500ms ease-in;
+  opacity: 1;
+
+  transform: translateY(-20%);
+}
+
+.simbolos-de-fe-cards a:hover img,
+#nossas-reunioes .nossas-reunioes-cards-item:hover img
+{
+  filter: brightness(.8);
+  transition: all 100ms ease-out;
+}
+
+
+
+
+.simbolos-de-fe-cards a:hover:after,
+.nossas-reunioes-cards-item:hover:after
+{
+  content: '';
+  display: grid;
+  grid-column: 1;
+  grid-row: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  background: linear-gradient(to bottom,rgba(12, 90, 219, 0.4) 0%, rgba(1, 78, 130, 0.4) 100%);
+  mix-blend-mode: difference;
+}
+
+
+
+
+/* --------- */
+#contribua-onde-estamos{
+  height: auto;
+  margin: 200px 0;
+
+  display: grid;
+  align-items: center;
+}
+
+#contribua-onde-estamos .container{
+  display: flex;
+  gap: 20px;
+}
+
+#contribua-onde-estamos .cards{
+  transform: translateY(0);
+
+  grid-template-columns: 1fr 1fr;
+}
+
+#contribua-onde-estamos .cards .card{
+  height: auto;
+  padding: 20px;
+
+  justify-content: flex-start;
+}
+
+#contribua-onde-estamos .cards .informacoes{
+  grid-column: 1;
+  grid-row: 1;
+
+  color: var(--corTexto);
+}
+
+#contribua-onde-estamos .cards .card:after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--corDestaqueClara);
+  transition: all 200ms ease-in;
+}
+
+#contribua-onde-estamos .cards .card:hover:after{
+  width: 100%;
+}
+
+#contribua-onde-estamos .cards .card .informacoes,
+#contribua-onde-estamos .cards .card .informacoes h2
+{
+  transition: all 300ms ease-in-out;
+  z-index: 1;
+}
+
+#contribua-onde-estamos .cards .card .informacoes h2{
+  margin-bottom: 0;
+}
+
+
+#contribua-onde-estamos .cards .card:hover .informacoes,
+#contribua-onde-estamos .cards .card:hover .informacoes h2
+{
+  color: #FFF;
+
+  transition: all 200ms ease-in;
+}
+
+#contribua-onde-estamos .cards .card svg{
+  z-index: 1;
+}
+
+#contribua-onde-estamos .cards .card svg path{
+  transition: all 500ms ease-in-out;
+}
+
+#contribua-onde-estamos .cards .card:hover svg path{
+  fill: #FFF;
+  transition: all 100ms ease-in;
+}
+
+#contribua-onde-estamos .cards .card .botao{
+  margin-top: 30px;
+}
+
+#contribua-onde-estamos .cards .card:hover .botao{
+  border-color: #FFF;
+  transition: all 100ms ease-in;
+}
+
+#contribua-onde-estamos .cards .card:hover .botao span{
+  color: #FFF;
+  transition: all 100ms ease-in;
+}
+
+#contribua-onde-estamos .cards .card:hover .botao:hover::after{
+  background-color: #FFF;
+}
+
+#contribua-onde-estamos .cards .card:hover .botao:hover span{
+  color: var(--corDestaqueClara);
+}
+
+#contribua-onde-estamos .endereco{
+  margin-top: 10px;
+}
+
+#contribua-onde-estamos .endereco,
+#footer .endereco p
+{
+  font-size: 1.2em;
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+#contribua-onde-estamos .endereco p,
+#footer .endereco p
+{
+  margin: 0;
+}
+
+
+
+
+/* ---------- */
+#morrinho{
+  height: auto;
+  padding: 50px 0;
+  background-color: var(--corSuave);
+  display: flex;
+}
+
+#morrinho .informacoes{
+  margin-left: 20px;
+  margin-right: 20px;
+
+  display: grid;
+  width: 50%;
+
+  align-content: center;
+}
+
+#morrinho .informacoes p{
+  color: var(--corTexto);
+  margin-bottom: 5px;
+}
+
+#morrinho .informacoes svg{
+  margin-bottom: 20px;
+}
+
+#morrinho .informacoes .botao{
+  margin-top: 20px;
+}
+
+
+/* ---------- */
+#footer svg{
+  margin-bottom: 10px;
+}
+#footer .endereco p{
+  padding: 0;
+}
